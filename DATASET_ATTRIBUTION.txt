@@ -1,0 +1,10 @@
+Dataset attribution
+
+Cortez, P. (2008). Student Performance. UCI Machine Learning Repository.
+https://doi.org/10.24432/C5TG7T.
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+Official dataset page: https://archive.ics.uci.edu/dataset/320/student+performance
+
+This project downloads the dataset at training time. It uses student-mat.csv for a binary educational demonstration target:
+At risk = G3 < 10/20. The model excludes G1 and G2 from features to reduce target leakage.

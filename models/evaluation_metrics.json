@@ -1,0 +1,127 @@
+{
+  "dataset": "UCI Student Performance (student-mat.csv)",
+  "citation": "Cortez, P. (2008). Student Performance. UCI Machine Learning Repository. https://doi.org/10.24432/C5TG7T.",
+  "license": "CC BY 4.0",
+  "selected_model": "Random Forest",
+  "selection_metric": "5-fold cross-validation macro F1",
+  "best_cross_validation_macro_f1": 0.6070920397259634,
+  "best_parameters": {
+    "classifier__max_depth": 4,
+    "classifier__min_samples_leaf": 2,
+    "classifier__n_estimators": 200
+  },
+  "model_comparison": [
+    {
+      "model": "Decision Tree",
+      "best_cv_macro_f1": 0.5423218367755173,
+      "best_parameters": {
+        "classifier__max_depth": 5,
+        "classifier__min_samples_leaf": 4
+      }
+    },
+    {
+      "model": "Random Forest",
+      "best_cv_macro_f1": 0.6070920397259634,
+      "best_parameters": {
+        "classifier__max_depth": 4,
+        "classifier__min_samples_leaf": 2,
+        "classifier__n_estimators": 200
+      }
+    },
+    {
+      "model": "Logistic Regression",
+      "best_cv_macro_f1": 0.6040674413572531,
+      "best_parameters": {
+        "classifier__C": 0.1
+      }
+    }
+  ],
+  "target": "At risk = G3 < 10/20",
+  "features_used": [
+    "school",
+    "sex",
+    "age",
+    "address",
+    "famsize",
+    "Pstatus",
+    "Medu",
+    "Fedu",
+    "Mjob",
+    "Fjob",
+    "reason",
+    "guardian",
+    "traveltime",
+    "studytime",
+    "failures",
+    "schoolsup",
+    "famsup",
+    "paid",
+    "activities",
+    "nursery",
+    "higher",
+    "internet",
+    "romantic",
+    "famrel",
+    "freetime",
+    "goout",
+    "Dalc",
+    "Walc",
+    "health",
+    "absences"
+  ],
+  "excluded_to_avoid_grade_leakage": [
+    "G1",
+    "G2",
+    "G3"
+  ],
+  "total_records": 395,
+  "train_size": 296,
+  "test_size": 99,
+  "at_risk_rate": 0.3291139240506329,
+  "accuracy": 0.7171717171717171,
+  "balanced_accuracy": 0.6590909090909092,
+  "macro_f1": 0.6652173913043478,
+  "macro_precision": 0.6782407407407407,
+  "macro_recall": 0.6590909090909092,
+  "baseline_accuracy": 0.6666666666666666,
+  "baseline_macro_f1": 0.4,
+  "confusion_matrix": [
+    [
+      55,
+      11
+    ],
+    [
+      17,
+      16
+    ]
+  ],
+  "classification_report": {
+    "Not at risk": {
+      "precision": 0.7638888888888888,
+      "recall": 0.8333333333333334,
+      "f1-score": 0.7971014492753623,
+      "support": 66.0
+    },
+    "At risk": {
+      "precision": 0.5925925925925926,
+      "recall": 0.48484848484848486,
+      "f1-score": 0.5333333333333333,
+      "support": 33.0
+    },
+    "accuracy": 0.7171717171717171,
+    "macro avg": {
+      "precision": 0.6782407407407407,
+      "recall": 0.6590909090909092,
+      "f1-score": 0.6652173913043478,
+      "support": 99.0
+    },
+    "weighted avg": {
+      "precision": 0.70679012345679,
+      "recall": 0.7171717171717171,
+      "f1-score": 0.7091787439613527,
+      "support": 99.0
+    }
+  },
+  "random_state": 42,
+  "caution": "Small historical sample from two Portuguese schools. Results may not generalize and are for educational demonstration only, not real student-risk decisions."
+}
